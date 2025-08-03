@@ -24,9 +24,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+    
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+        className={`${geistSans.variable} ${geistMono.variable} antialiased dark`}
+        >
+        <nav className="flex justify-around">
+          <div><p>Home</p></div>
+          <div><p>About Me</p></div>
+        </nav>
         {children}
       </body>
     </html>
