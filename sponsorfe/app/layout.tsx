@@ -28,11 +28,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased dark`}
         >
+          <header>
         <nav className="flex justify-around">
           <div><p>Home</p></div>
           <div><p>About Me</p></div>
         </nav>
+            </header>
         {children}
+      <footer className="text-center">Contact Us</footer>
       </body>
     </html>
   );
