@@ -20,15 +20,15 @@ export default function CarouselWrapper() {
     loop: true,
     }}
     plugins={[autoplay]}
-    className="mx-auto w-100 h-100" >
-    
+    className="mx-auto w-7/10 h-full">
+   
     <CarouselContent className="ml-4">
-    <CarouselItem className="basis-1/3 pl-1 ">1</CarouselItem>
-    <CarouselItem className="basis-1/3 pl-1" >eee</CarouselItem>
-    <CarouselItem className="basis-1/3 pl-1">Brian</CarouselItem>
-    <CarouselItem className="basis-1/3 pl-1">bais</CarouselItem>
-    <CarouselItem className="basis-1/3 pl-1">Wei-en</CarouselItem>
+        <CarouselItem className="basis-1/3 pl-1" ><div className="flex aspect-square items-center justify-center bg-teal-600 rounded-xl ">1</div></CarouselItem>
+        <CarouselItem className="basis-1/3 pl-1"><div className="flex aspect-square items-center justify-center ">Daven</div></CarouselItem>
+        <CarouselItem className="basis-1/3 pl-1"><div className="flex aspect-square items-center justify-center bg-[rgb(114,11,152)]">Wei-en</div></CarouselItem>
+        <CarouselItem className="basis-1/3 pl-1"><div className="flex aspect-square items-center justify-center ">Balls</div></CarouselItem>
     </CarouselContent>
+    
     <CarouselPrevious />
     <CarouselNext />
   </Carousel>
