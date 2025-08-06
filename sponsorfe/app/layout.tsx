@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Button } from "@/components/ui/button";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,12 +27,16 @@ export default function RootLayout({
     <html lang="en">
     
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased dark`}
+        className={`${geistSans.variable} ${geistMono.variable} h-screen antialiased dark`}
         >
           <header>
-        <nav className="flex justify-around">
-          <div><p>Home</p></div>
-          <div><p>About Me</p></div>
+        <nav className="flex justify-around p-3">
+          <h1>Sponsor</h1>
+          <div className="gap-2 flex">
+          <Button variant="outline">About Us</Button>
+          <Button variant="outline">Login</Button>
+          <Button variant="outline">Sign Up</Button>
+          </div>
         </nav>
             </header>
         {children}
