@@ -1,5 +1,5 @@
 "use client"
-
+import { ChevronRight, ChevronLeft } from 'lucide-react';
 import Image from "next/image";
 import React from "react";
 import Autoplay from "embla-carousel-autoplay"
@@ -10,17 +10,18 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import { Button } from "./ui/button";
 
 const autoplay = Autoplay({ delay: 2000 });
 
 export default function CarouselWrapper() {
- return <div>
+ return (<div>
     <Carousel   opts={{
     align: "start",
     loop: true,
     }}
     plugins={[autoplay]}
-    className="mx-auto w-7/10 h-full">
+    className="mx-auto w-7/10 h-full py-3">
    
     <CarouselContent className="ml-4">
         <CarouselItem className="basis-1/3 pl-1" ><div className="flex aspect-square items-center justify-center bg-teal-600 rounded-xl ">1</div></CarouselItem>
@@ -29,8 +30,13 @@ export default function CarouselWrapper() {
         <CarouselItem className="basis-1/3 pl-1"><div className="flex aspect-square items-center justify-center ">Balls</div></CarouselItem>
     </CarouselContent>
     
-    <CarouselPrevious />
+        <CarouselPrevious size={'default'}>
+        </CarouselPrevious>
+
+        <CarouselNext variant={"destructive"}/>
+  
+
     <CarouselNext />
   </Carousel>
-</div>
+</div>)
 }
