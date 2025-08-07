@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/carousel"
 import { Button } from "./ui/button";
 
-const autoplay = Autoplay({ delay: 2000 });
+const autoplay = Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: true,  });
 
 export default function CarouselWrapper() {
  return (<div>
@@ -20,9 +20,9 @@ export default function CarouselWrapper() {
     align: "start",
     loop: true,
     }}
-    plugins={[autoplay]}
-    className="mx-auto w-7/10 h-full py-3">
-   
+    plugins={[autoplay, ]}
+    className="mx-auto w-7/10 h-full py-3"
+>   
     <CarouselContent className="ml-4">
         <CarouselItem className="basis-1/3 pl-1" ><div className="flex aspect-square items-center justify-center bg-teal-600 rounded-xl ">1</div></CarouselItem>
         <CarouselItem className="basis-1/3 pl-1"><div className="flex aspect-square items-center justify-center ">Daven</div></CarouselItem>

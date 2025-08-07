@@ -30,7 +30,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} h-screen antialiased dark`}
         >
           <header>
-        <nav className="flex justify-around items-center p-3 bg-[#720b98]">
+        <nav className="flex justify-around items-center p-3">
           <h1><a href="/">Sponsor</a></h1>
           <div className="gap-2 flex">
           <Button variant="outline"><a href="/about">About Us</a></Button>
